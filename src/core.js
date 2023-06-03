@@ -173,7 +173,7 @@ function panScale(scale, delta, limits, state) {
   }
 }
 
-export function pan(chart, delta, enabledScales, transition = 'none') {
+export function pan(chart, delta, enabledScales, transition = 'active') {
   const {x = 0, y = 0} = typeof delta === 'number' ? {x: delta, y: delta} : delta;
   const state = getState(chart);
   const {options: {pan: panOptions, limits}} = state;
